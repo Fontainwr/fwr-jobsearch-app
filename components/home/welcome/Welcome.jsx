@@ -30,6 +30,7 @@ const Welcome = () => {
             style={styles.searchInput}
             value=""
             onChange={() => {}}
+            placeholder='What are you looking for today?'
           />
         </View>
       </View>
