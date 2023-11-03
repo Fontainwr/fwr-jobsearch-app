@@ -17,7 +17,12 @@ const Popularjobs = () => {
     num_pages: 1
   })
 
-  // console.log(data)
+  const [selectedJob, setSelectedJob] = useState();
+
+  const handleCardPress = (item) => {
+
+
+    };
 
   return (
     <View style={styles.container}>
@@ -32,7 +37,7 @@ const Popularjobs = () => {
         {isLoading ? (
           <ActivityIndicator size="large" colors={COLORS.primary} />
         ) :error ? (
-          <Text>Something when wrong</Text>
+          <Text>Something went wrong</Text>
         ) :(
           <FlatList 
           data={data}
