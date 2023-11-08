@@ -3,25 +3,23 @@ import { StyleSheet } from "react-native";
 import { COLORS, FONT, SHADOWS, SIZES } from "../../../../constants";
 
 const styles = StyleSheet.create({
-// In popularjobcard.style.js
-container: (selectedJob, item) => ({
-  width: 250,
-  padding: SIZES.xLarge,
-  backgroundColor: (selectedJob === (item?.job_id || null)) ? COLORS.primary : "#FFF",
-  borderRadius: SIZES.medium,
-  justifyContent: "space-between",
-  ...SHADOWS.medium,
-  shadowColor: COLORS.white,
-}),
-logoContainer: (selectedJob, item) => ({
-  width: 50,
-  height: 50,
-  backgroundColor: (selectedJob === (item?.job_id || null)) ? "#FFF" : COLORS.white,
-  borderRadius: SIZES.medium,
-  justifyContent: "center",
-  alignItems: "center",
-}),
-
+  container: (selectedJob, item) => ({
+    width: 250,
+    padding: SIZES.xLarge,
+    backgroundColor: selectedJob === item.job_id ? COLORS.primary : "#FFF",
+    borderRadius: SIZES.medium,
+    justifyContent: "space-between",
+    ...SHADOWS.medium,
+    shadowColor: COLORS.white,
+  }),
+  logoContainer: (selectedJob, item) => ({
+    width: 50,
+    height: 50,
+    backgroundColor: selectedJob === item.job_id ? "#FFF" : COLORS.white,
+    borderRadius: SIZES.medium,
+    justifyContent: "center",
+    alignItems: "center",
+  }),
   logoImage: {
     width: "70%",
     height: "70%",
